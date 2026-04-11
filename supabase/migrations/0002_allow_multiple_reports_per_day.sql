@@ -1,0 +1,1 @@
+drop index if exists public.work_reports_one_report_per_employee_per_day_uidx;

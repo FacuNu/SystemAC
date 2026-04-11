@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --surface: 246 244 238;
+  --surface-muted: 231 225 210;
+  --surface-ink: 26 27 26;
+  --surface-accent: 15 118 110;
+  --surface-danger: 180 83 9;
+  --surface-line: 200 190 168;
+  --page-gradient-top-left: rgba(15, 118, 110, 0.12);
+  --page-gradient-top-right: rgba(180, 83, 9, 0.11);
+  --page-gradient-bottom: #f1ecde;
+}
+
+:root[data-theme="dark"] {
+  --surface: 22 25 24;
+  --surface-muted: 38 44 43;
+  --surface-ink: 235 238 236;
+  --surface-accent: 67 193 182;
+  --surface-danger: 245 181 88;
+  --surface-line: 76 84 82;
+  --page-gradient-top-left: rgba(67, 193, 182, 0.18);
+  --page-gradient-top-right: rgba(245, 181, 88, 0.12);
+  --page-gradient-bottom: #121513;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, var(--page-gradient-top-left), transparent 28%),
+    radial-gradient(circle at top right, var(--page-gradient-top-right), transparent 25%),
+    linear-gradient(180deg, rgb(var(--surface)) 0%, var(--page-gradient-bottom) 100%);
+  color: rgb(var(--surface-ink));
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(15, 118, 110, 0.18);
+}
+
+:root[data-theme="dark"] .bg-white {
+  background-color: rgb(30 34 33) !important;
+}
+
+:root[data-theme="dark"] .bg-white\/75 {
+  background-color: rgba(30, 34, 33, 0.78) !important;
+}
+
+:root[data-theme="dark"] .bg-white\/72 {
+  background-color: rgba(30, 34, 33, 0.75) !important;
+}
+
+:root[data-theme="dark"] .bg-white\/70 {
+  background-color: rgba(30, 34, 33, 0.72) !important;
+}
+
+:root[data-theme="dark"] .bg-white\/60 {
+  background-color: rgba(30, 34, 33, 0.64) !important;
+}
+
+:root[data-theme="dark"] .bg-orange-50 {
+  background-color: rgba(70, 52, 24, 0.5) !important;
+}
+
+:root[data-theme="dark"] .bg-emerald-50 {
+  background-color: rgba(18, 52, 42, 0.55) !important;
+}
+
+:root[data-theme="dark"] .bg-amber-50 {
+  background-color: rgba(73, 56, 20, 0.58) !important;
+}
+
+:root[data-theme="dark"] .border-white\/10 {
+  border-color: rgba(255, 255, 255, 0.14) !important;
+}
+
+:root[data-theme="dark"] .text-white {
+  color: rgb(244 247 246) !important;
+}
+
+:root[data-theme="dark"] .text-white\/90 {
+  color: rgba(244, 247, 246, 0.9) !important;
+}
+
+:root[data-theme="dark"] .text-white\/80 {
+  color: rgba(244, 247, 246, 0.8) !important;
+}
+
+:root[data-theme="dark"] .text-white\/78 {
+  color: rgba(244, 247, 246, 0.78) !important;
+}
+
+:root[data-theme="dark"] .text-white\/60 {
+  color: rgba(244, 247, 246, 0.6) !important;
+}
